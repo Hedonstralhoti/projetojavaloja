@@ -9,11 +9,12 @@ import pojo.Estado;
 public class TelaCadastroEstado extends TelaCadastro{
     private Estado estado = new Estado();
     private DaoEstado daoEstado = new DaoEstado(estado);
+    
     private MeuCampoTexto campoIdEstado = new MeuCampoTexto(10, true,"Código");
     private MeuCampoTexto campoNome = new MeuCampoTexto(50, false, "Nome");
     private MeuCampoTexto campoSigla = new MeuCampoTexto(2, false, "Sigla");
     private MeuCampoTexto campoAtivo = new MeuCampoTexto(1, false, "Ativo");
-    private MeuComboBox campoPais = new MeuComboBox(new String[]{"Brasil", "Paraguay"}, false, "Pais");
+    private MeuCampoTexto campoidPais = new MeuCampoTexto(10, false, "Pais");
         
     
     public TelaCadastroEstado(){
@@ -24,7 +25,7 @@ public class TelaCadastroEstado extends TelaCadastro{
         adicionaComponente(2 ,1 ,1 ,3 , campoNome);
         adicionaComponente(3 ,1 ,1 ,1 , campoSigla);
         adicionaComponente(4 ,1 ,1 ,1 , campoAtivo);
-        adicionaComponente(5 ,1 ,1 ,1 , campoPais);
+        adicionaComponente(5 ,1 ,1 ,1 , campoidPais);
         habilitaCampos(false);
 
        pack();
@@ -32,7 +33,7 @@ public class TelaCadastroEstado extends TelaCadastro{
     }
     @Override
     public void incluirBD(){
-        estado.setId(Integer.parseInt(campoIdEstado.getText()));
+        estado.setIdEstado(Integer.parseInt(campoIdEstado.getText()));
         estado.setNome(campoNome.getText());
         estado.setSigla(campoSigla.getText());
         estado.setAtivo(campoAtivo.getText());
@@ -49,9 +50,9 @@ public class TelaCadastroEstado extends TelaCadastro{
     }
     @Override
     public void preencherDados(int id){
-        estado.setId(id);
+        estado.setIdEstado(id);
         daoEstado.consultar();
-        campoIdEstado.setText(""+ estado.getId());
+        campoIdEstado.setText(""+ estado.getIdEstado());
         campoNome.setText(estado.getNome());
         campoSigla.setText(estado.getSigla());
         campoAtivo.setText(estado.getAtivo());

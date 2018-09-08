@@ -1,4 +1,3 @@
-
 package dao;
 
 import banco.Banco;
@@ -24,7 +23,7 @@ public class DaoEstado {
      Connection conexao = Banco.getConexao();
      String sql = "INSERT INTO ESTADO VALUES(?,?,?,?)";
      PreparedStatement ps = conexao.prepareStatement(sql); 
-     ps.setInt(1, estado.getId());
+     ps.setInt(1, estado.getIdEstado());
      ps.setString(2, estado.getNome());
      ps.setString(3,estado.getSigla());
      ps.setString(4, estado.getAtivo());
@@ -46,7 +45,7 @@ public class DaoEstado {
         try{
      Connection conexao = Banco.getConexao();
      PreparedStatement ps = conexao.prepareStatement(SQL_CONSULTAR_ID); 
-     ps.setInt(1, estado.getId());
+     ps.setInt(1, estado.getIdEstado());
 //     ps.setString(2, estado.getNome());
 //     ps.setString(3,estado.getSigla());
 //     ps.setString(4, estado.getAtivo());

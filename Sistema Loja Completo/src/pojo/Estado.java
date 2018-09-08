@@ -1,20 +1,26 @@
-
 package pojo;
-
 
 public class Estado {
     private int idEstado;
     private String nome;
     private String sigla;
     private String ativo;
-    private Pais pais = new Pais();
+    private Pais idPais = new Pais();
 
-    public int getId() {
+    public int getIdEstado() {
         return idEstado;
     }
 
-    public void setId(int id) {
-        this.idEstado = id;
+    public void setIdEstado(int idEstado) {
+        this.idEstado = idEstado;
+    }
+
+    public Pais getIdPais() {
+        return idPais;
+    }
+
+    public void setIdPais(Pais idPais) {
+        this.idPais = idPais;
     }
 
     public String getNome() {

@@ -1,6 +1,5 @@
 package pojo;
 
-
 public class Empresa {
     private int idEmpresa;
     private String nome;
@@ -10,8 +9,8 @@ public class Empresa {
     private String telefone;
     private String celular;
     private String ativo;
-    private Representante representante = new Representante();
-    private Cidade cidade = new Cidade();
+    private Representante idRepresentante = new Representante();
+    private Cidade idCidade = new Cidade();
 
     public int getIdEmpresa() {
         return idEmpresa;
@@ -77,19 +76,20 @@ public class Empresa {
         this.ativo = ativo;
     }
 
-    public Representante getRepresentante() {
-        return representante;
+    public Representante getIdRepresentante() {
+        return idRepresentante;
     }
 
-    public void setRepresentante(Representante representante) {
-        this.representante = representante;
+    public void setIdRepresentante(Representante idRepresentante) {
+        this.idRepresentante = idRepresentante;
     }
 
-    public Cidade getCidade() {
-        return cidade;
+    public Cidade getIdCidade() {
+        return idCidade;
     }
 
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
+    public void setIdCidade(Cidade idCidade) {
+        this.idCidade = idCidade;
     }
+    
 }
