@@ -125,7 +125,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
             
         }if (!errosObrigatorios.isEmpty()){
             JOptionPane.showMessageDialog(null,
-                    "Campos obrigatórios não preenchidos: \n \n"+errosValidacao);
+                    "Campos não preenchidos: \n \n"+errosValidacao);
         }
         return errosObrigatorios.isEmpty() && errosValidacao.isEmpty();
     }
@@ -186,7 +186,7 @@ public class TelaCadastro extends JInternalFrame implements ActionListener {
             temDadosNaTela = true;
         }
         if(estadoTela == EXCLUINDO){
-            int opcao = JOptionPane.showConfirmDialog(this, "Deseha excluir realmente?", "Atenção", JOptionPane.YES_NO_OPTION);
+            int opcao = JOptionPane.showConfirmDialog(this, "Deseja excluir realmente?", "Atenção", JOptionPane.YES_NO_OPTION);
             if(opcao == JOptionPane.YES_OPTION){
                 limpaCampos();
                 temDadosNaTela = false;

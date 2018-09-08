@@ -20,7 +20,7 @@ public class MeuCampoTexto extends JTextField implements MeuComponente {
                 setBackground(Color.white);
             }
             public void focusGained(FocusEvent fe){
-                setBackground(Color.yellow);
+                setBackground(new java.awt.Color(192,192,192));
             }
         });
         

@@ -1,16 +1,16 @@
 package pojo;
 
-public class Pais {
-    private int idPais;
+public class Estacao {
+    private int idEstacao;
     private String nome;
     private String ativo;
 
-    public int getIdPais() {
-        return idPais;
+    public int getIdEstacao() {
+        return idEstacao;
     }
 
-    public void setIdPais(int idPais) {
-        this.idPais = idPais;
+    public void setIdEstacao(int idEstacao) {
+        this.idEstacao = idEstacao;
     }
 
     public String getNome() {

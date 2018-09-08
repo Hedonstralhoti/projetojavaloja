@@ -1,6 +1,5 @@
 package pojo;
 
-
 public class Representante {
     private int idRepresentante;
     private String nome;

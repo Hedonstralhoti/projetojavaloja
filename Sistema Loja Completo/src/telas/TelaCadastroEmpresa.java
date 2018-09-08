@@ -13,6 +13,8 @@ public class TelaCadastroEmpresa extends TelaCadastro{
     private MeuCampoTexto campoTelefone = new MeuCampoTexto(10, true, "Telefone");
     private MeuCampoTexto campoCelular = new MeuCampoTexto(11, false, "Celular");
     private MeuCampoTexto campoAtivo = new MeuCampoTexto(1, false, "Ativo");
+    private MeuCampoTexto campoidRepresentante = new MeuCampoTexto(10, false, "Representante");
+    private MeuCampoTexto campoidCidade = new MeuCampoTexto(10, false, "Cidade");
    
         
     
